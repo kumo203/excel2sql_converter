@@ -109,8 +109,6 @@ namespace excel2sql_converter // Note: actual namespace depends on the project n
                     }
                 }
 
-                Console.WriteLine(list);
-
                 StringBuilder userSqlSb = new StringBuilder(); 
                 foreach (var user in list)
                 {
@@ -221,9 +219,12 @@ namespace excel2sql_converter // Note: actual namespace depends on the project n
                     userPasswordListSb.AppendLine($"{user.Email},{user.PasswordText}");
                 }
                 File.WriteAllText(UserPasswordList, userPasswordListSb.ToString());
+
+                Console.WriteLine("AddingUser.sqlとそれに付随するファイルを生成しました。");
             }
             catch (Exception ex)
             {
+                Console.WriteLine("エラー");
                 Console.WriteLine(ex);
             }
         }
