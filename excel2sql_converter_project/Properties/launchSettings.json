@@ -2,7 +2,7 @@
   "profiles": {
     "excel2sql_converter_project": {
       "commandName": "Project",
-      "commandLineArgs": "users-2022-05-20_ForImportTest.csv 13 9 7 2000000000"
+      "commandLineArgs": "users-2022-05-20_ForImportTest.csv 13 9 7"
     }
   }
 }

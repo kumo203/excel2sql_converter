@@ -46,8 +46,7 @@ namespace excel2sql_converter // Note: actual namespace depends on the project n
             {
                 if (args.Length < 4)
                 {
-                    Console.WriteLine("{0} target.csv usersテーブル追加開始ID user_pointsテーブル追加開始ID user_crownsテーブル追加開始ID {usersテーブル追加開始member_id}",
-                        typeof(Program).Assembly.GetName().Name);
+                    Console.WriteLine("csv2sql_converter target.csv usersテーブル追加開始ID user_pointsテーブル追加開始ID user_crownsテーブル追加開始ID {usersテーブル追加開始member_id}");
                     return;
                 }
                 var target = args[0];
@@ -67,6 +66,7 @@ namespace excel2sql_converter // Note: actual namespace depends on the project n
                 };
 
                 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+ 
                 string password_pattern_csv = new StreamReader(PasswordPatternName, Encoding.GetEncoding(932)).ReadToEnd();
                 List<string[]> passwordPatterns = new List<string[]>();
                 foreach (var line in CsvReader.ReadFromText(password_pattern_csv, options))
